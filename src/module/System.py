@@ -4,7 +4,7 @@ from datetime import datetime as dt
 
 from core.cog import cog_base
 
-class system(cog_base):
+class System(cog_base):
 
     @commands.command()
     async def load(self, ctx, extension):
@@ -56,4 +56,4 @@ class system(cog_base):
 
 
 def setup(bot):
-    bot.add_cog(system(bot))
+    bot.add_cog(System(bot))

@@ -12,16 +12,6 @@ bot = commands.Bot(command_prefix='!')
 async def on_ready():
     print(">> Bot is online <<")
 
-@bot.event
-async def on_member_join(member):
-    channel = bot.get_channel(int(JSON_SETTING['MAIN_TEXT_CHANNEL']))
-    await channel.send(f'{member} join!')
-
-@bot.event
-async def on_member_remove(member):
-    channel = bot.get_channel(int(JSON_SETTING['MAIN_TEXT_CHANNEL']))
-    await channel.send(f'{member} leave!')
-
 
 MODULE_PATH = "./module"
 for filename in os.listdir(MODULE_PATH):
